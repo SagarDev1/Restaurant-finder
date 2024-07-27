@@ -1,0 +1,143 @@
+
+body {
+    font-family: "Merienda", cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top right, #000066 0%, #660066 79%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    color:#ffff33;
+    text-align: center;
+    padding: 0.3rem;
+    border-color: wheat;
+    border-width: 6px;
+    border-style: dashed;
+    border-radius: 36px;
+}
+
+
+header h1 {
+    font-weight: 900;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+
+/* Main Styles */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#search-input {
+    font-family: "Noto Sans", sans-serif;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    font-family: "Merienda", cursive;
+    background: linear-gradient(to top right, #ff3300 0%, #0033cc 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(to bottom left, #ff3300 0%, #0033cc 100%);
+    transform: scale(1.05);
+}
+
+#restaurants {
+    width: 100%;
+    max-width: 1700px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Restaurant Card Styles */
+.restaurant-card {
+    background-color: #101010;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    width: calc(33.333% - 1rem);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-card h2 {
+    margin: 0.5rem 0;
+    color: #ff3300;
+    font-size: 1.5rem;
+    font-family: "Playwrite DK Loopet", cursive;
+}
+
+.restaurant-card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.restaurant-map {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.restaurant-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1100px) {
+    .restaurant-card {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 750px) {
+    .restaurant-card {
+        width: calc(33.333% - 1rem);
+    }
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .restaurant-card {
+        width: 100%;
+    }
+}
